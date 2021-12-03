@@ -465,23 +465,61 @@
                 </div>
             </div>
         </footer>
-        <div class="backdrop is-hidden" data-modal>
+        <div class="backdrop" data-modal>
             <div class="modal">
-                <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-                <form action="#">
-                    <label class="name"
-                        >Имя
-                        <input type="text" />
-                    </label>
-                    <label class="tel"
-                        >Телефон
-                        <input type="tel" />
-                    </label>
-                    <label class="name"
-                        >Почта
-                        <input type="email" />
-                    </label>
-                </form>
+                <section class="feedback">
+                    <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                    <form action="#" class="feedback-form">
+                        <label class="feedback-label"
+                            >Имя
+                            <div class="input-wrap">
+                                <input class="feedback-input" type="text" name="name" autofocus />
+                                <svg class="input-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-person-fb"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label class="feedback-label"
+                            >Телефон
+                            <div class="input-wrap">
+                                <input class="feedback-input" type="tel" name="tel" />
+                                <svg class="input-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-phone-fb"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label class="feedback-label"
+                            >Почта
+                            <div class="input-wrap">
+                                <input class="feedback-input" type="email" name="email" />
+                                <svg class="input-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-email-fb"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label class="feedback-label"
+                            >Комментарий
+                            <textarea name="comment" placeholder="Введите текст"></textarea>
+                        </label>
+                        <div class="checkbox-field">
+                            <input
+                                class="check-policy visually-hidden"
+                                type="checkbox"
+                                name="policy"
+                                id="policy"
+                            />
+                            <label class="policy-text" for="policy">
+                                <svg class="check-icon" width="16" height="15">
+                                    <use href="./images/sprite.svg#icon-box-empty"></use>
+                                </svg>
+
+                                Соглашаюсь с рассылкой и принимаю&nbsp;
+                                <span class="policy-text-link">Условия договора</span>
+                            </label>
+                        </div>
+                        <button class="btn feedback-btn" type="submit">Отправить</button>
+                    </form>
+                </section>
                 <button type="button" class="modal-close" data-modal-close>
                     <svg class="modal-close-icon" width="18" height="18">
                         <use href="./images/sprite.svg#icon-close"></use>
@@ -489,6 +527,6 @@
                 </button>
             </div>
         </div>
-        <script src="./js/modal.js"></script>
+        <!-- <script src="./js/modal.js"></script> -->
     </body>
 </html>
