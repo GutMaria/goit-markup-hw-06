@@ -742,6 +742,15 @@ a.active::after {
     justify-content: center;
 }
 
+.modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+    fill: var(--accent);
+}
+
 .backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -775,7 +784,7 @@ a.active::after {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .feedback-label:last-of-type {
@@ -797,7 +806,7 @@ a.active::after {
 
     padding: 11px 12px;
     padding-left: 42px;
-    margin-top: 4px;
+    margin-bottom: 10px;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -840,7 +849,7 @@ textarea::placeholder {
 .input-icon {
     position: absolute;
     left: 12px;
-    top: 15px;
+    top: 11px;
     fill: #212121;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -867,17 +876,31 @@ textarea::placeholder {
     justify-content: center;
 }
 
+.policy-item {
+    width: 16px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--black);
+    border-radius: 2px;
+    margin-right: 8px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-icon {
+    fill: var(--white);
+}
+
+.check-policy:checked + .policy-text > .policy-item {
+    background-color: var(--accent);
+    border: none;
+}
+
 .policy-text-link {
     color: var(--accent);
     text-decoration: underline;
-}
-
-.check-icon {
-    margin-right: 8px;
-}
-
-.check-policy:checked + .policy-text > .check-icon {
-    background-color: var(--accent);
 }
 
 .feedback-btn {

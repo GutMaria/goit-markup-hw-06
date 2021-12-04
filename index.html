@@ -465,38 +465,46 @@
                 </div>
             </div>
         </footer>
-        <div class="backdrop" data-modal>
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <section class="feedback">
+                <div class="feedback">
                     <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
                     <form action="#" class="feedback-form">
-                        <label class="feedback-label"
-                            >Имя
-                            <div class="input-wrap">
-                                <input class="feedback-input" type="text" name="name" autofocus />
-                                <svg class="input-icon" width="18" height="18">
-                                    <use href="./images/sprite.svg#icon-person-fb"></use>
-                                </svg>
-                            </div>
-                        </label>
-                        <label class="feedback-label"
-                            >Телефон
-                            <div class="input-wrap">
-                                <input class="feedback-input" type="tel" name="tel" />
-                                <svg class="input-icon" width="18" height="18">
-                                    <use href="./images/sprite.svg#icon-phone-fb"></use>
-                                </svg>
-                            </div>
-                        </label>
-                        <label class="feedback-label"
-                            >Почта
-                            <div class="input-wrap">
-                                <input class="feedback-input" type="email" name="email" />
-                                <svg class="input-icon" width="18" height="18">
-                                    <use href="./images/sprite.svg#icon-email-fb"></use>
-                                </svg>
-                            </div>
-                        </label>
+                        <label for="user-name" class="feedback-label">Имя</label>
+                        <div class="input-wrap">
+                            <input
+                                id="user-name"
+                                class="feedback-input"
+                                type="text"
+                                name="name"
+                                autofocus
+                            />
+                            <svg class="input-icon" width="18" height="18">
+                                <use href="./images/sprite.svg#icon-person-fb"></use>
+                            </svg>
+                        </div>
+
+                        <label for="user-phone" class="feedback-label">Телефон</label>
+                        <div class="input-wrap">
+                            <input id="user-phone" class="feedback-input" type="tel" name="tel" />
+                            <svg class="input-icon" width="18" height="18">
+                                <use href="./images/sprite.svg#icon-phone-fb"></use>
+                            </svg>
+                        </div>
+
+                        <label for="user-mail" class="feedback-label">Почта</label>
+                        <div class="input-wrap">
+                            <input
+                                id="user-mail"
+                                class="feedback-input"
+                                type="email"
+                                name="email"
+                            />
+                            <svg class="input-icon" width="18" height="18">
+                                <use href="./images/sprite.svg#icon-email-fb"></use>
+                            </svg>
+                        </div>
+
                         <label class="feedback-label"
                             >Комментарий
                             <textarea name="comment" placeholder="Введите текст"></textarea>
@@ -509,17 +517,18 @@
                                 id="policy"
                             />
                             <label class="policy-text" for="policy">
-                                <svg class="check-icon" width="16" height="15">
-                                    <use href="./images/sprite.svg#icon-box-empty"></use>
-                                </svg>
-
+                                <span class="policy-item">
+                                    <svg class="policy-icon" width="16" height="15">
+                                        <use href="./images/sprite.svg#icon-Vector-check"></use>
+                                    </svg>
+                                </span>
                                 Соглашаюсь с рассылкой и принимаю&nbsp;
-                                <span class="policy-text-link">Условия договора</span>
+                                <a class="policy-text-link" href="">Условия договора</a>
                             </label>
                         </div>
                         <button class="btn feedback-btn" type="submit">Отправить</button>
                     </form>
-                </section>
+                </div>
                 <button type="button" class="modal-close" data-modal-close>
                     <svg class="modal-close-icon" width="18" height="18">
                         <use href="./images/sprite.svg#icon-close"></use>
@@ -527,6 +536,6 @@
                 </button>
             </div>
         </div>
-        <!-- <script src="./js/modal.js"></script> -->
+        <script src="./js/modal.js"></script>
     </body>
 </html>
